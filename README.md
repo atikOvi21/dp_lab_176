@@ -1,5 +1,7 @@
 Ride-Sharing Platform
+
 Overview
+
 This is a ride-sharing platform built using Java, following SOLID principles and best practices. The platform allows riders to book various types of rides (e.g., Carpool, Luxury, Bike), supports multiple payment methods, and includes a robust rating and notification system. It also provides an admin panel for managing drivers, riders, trip histories, and handling disputes.
 
 Features
