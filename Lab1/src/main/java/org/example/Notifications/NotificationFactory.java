@@ -2,7 +2,7 @@ package org.example.Notifications;
 
 public class NotificationFactory
 {
-    public static NotificationService getNotificationService(String preferredMethod)
+    public static NotificationService getNotificationService(String preferredMethod )
     {
         switch (preferredMethod)
         {

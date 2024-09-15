@@ -8,6 +8,21 @@ public class Rider
     private Double rating;
     private PaymentMethod preferredPaymentMethod;
 
+    public Rider(String riderId, String riderName, String location, Double rating, PaymentMethod preferredPaymentMethod) {
+        this.riderId = riderId;
+        this.riderName = riderName;
+        this.location = location;
+        this.rating = rating;
+        this.preferredPaymentMethod = preferredPaymentMethod;
+    }
+
+    public String getRiderId() {
+        return riderId;
+    }
+
+    public void setRiderId(String riderId) {
+        this.riderId = riderId;
+    }
 
     public void setPreferredPaymentMethod(PaymentMethod method)
     {

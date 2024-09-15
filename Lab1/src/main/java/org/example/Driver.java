@@ -1,13 +1,29 @@
 package org.example;
 
 public class Driver {
-    private int id;
+    private String id;
     private String name;
-    private String vehicleType;
+    private RideType vehicleType;
     private String location;
     private double rating;
     private boolean availability;
 
+    public Driver(String id, String name, RideType vehicleType, String location, double rating, boolean availability) {
+        this.id = id;
+        this.name = name;
+        this.vehicleType = vehicleType;
+        this.location = location;
+        this.rating = rating;
+        this.availability = availability;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void acceptRide(Trip trip)
     {
@@ -26,7 +42,7 @@ public class Driver {
 
     public void startTrip(Trip trip)
     {
-        trip.start();
+        trip.startTrip();
     }
 
 
