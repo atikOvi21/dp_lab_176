@@ -14,7 +14,8 @@ package org.example;
 //}
 
 
-public class Admin {
+public class Admin
+{
     private String id;
     private String name;
     private String role;
@@ -25,11 +26,15 @@ public class Admin {
         this.role = role;
     }
 
-    public void manageDriver(Driver driver, boolean activate) {
-        if (activate) {
+    public void manageDriver(Driver driver, boolean activate)
+    {
+        if (activate)
+        {
             driver.setAvailable(true);
             System.out.println("Driver " + driver.getName() + " is activated.");
-        } else {
+        }
+        else
+        {
             driver.setAvailable(false);
             System.out.println("Driver " + driver.getName() + " is deactivated.");
         }

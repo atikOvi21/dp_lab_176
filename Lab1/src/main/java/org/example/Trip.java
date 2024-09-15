@@ -8,7 +8,7 @@ public class Trip
     private RideType rideType;
     private double fare,distance;
 
-    public Trip(String dropOffLocation, String pickUpLocation,RideType rideType, String id, String status, double fare, double distance)
+    public Trip(String dropOffLocation, String pickUpLocation, RideType rideType, String id, String status, double fare, double distance)
     {
         this.dropOffLocation = dropOffLocation;
         this.pickUpLocation = pickUpLocation;
@@ -21,7 +21,7 @@ public class Trip
 
     private double calculateFare()
     {
-
+        return fare;
     }
 
     public void completeTrip() {
