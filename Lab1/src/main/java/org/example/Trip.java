@@ -9,16 +9,15 @@ public class Trip
     private Driver driver;
     private RideType rideType;
     private double fare,distance;
-
     private String pickUpLocation, dropOffLocation;
     private NotificationFactory notice;
     private NotificationService serve;
-    public Trip(  RideType rideType, String id, String status, double fare, double distance , String noticeMethod)
+    private TripStatus tripStatus;
+    public Trip(  RideType rideType, String id, double fare, double distance , String noticeMethod)
     {
 
         this.rideType = rideType;
         this.id = id;
-        this.status = status;
         this.fare = fare;
         this.distance = distance;
         notice=new NotificationFactory();
@@ -32,14 +31,14 @@ public class Trip
 
     public void startTrip()
     {
-        this.status = "In Progress";
+        this.tripStatus = TripStatus.COMPLETED;
         serve.sendNotification(rider.getRiderId(),"Started");
         serve.sendNotification(driver.getId(),"Started");
     }
 
     public void completeTrip()
     {
-        this.status = "Completed";
+        this.tripStatus = TripStatus.COMPLETED;
         rider.makePayment(this.fare);
         serve.sendNotification(rider.getRiderId(),"Completed");
         serve.sendNotification(driver.getId(),"Started");
@@ -57,7 +56,7 @@ public class Trip
         this.pickUpLocation = pickUpLocation;
     }
 
-    public String getDropOffLocation(String location)
+    public String getDropOffLocation()
     {
         return dropOffLocation;
     }
