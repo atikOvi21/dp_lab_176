@@ -4,17 +4,18 @@ import org.example.Notifications.NotificationFactory;
 import org.example.Notifications.NotificationService;
 public class Trip
 {
-    private String dropOffLocation,pickUpLocation,id,status, noticeMethod;
+    private String id,status, noticeMethod;
     private Rider rider;
     private Driver driver;
     private RideType rideType;
     private double fare,distance;
+
+    private String pickUpLocation, dropOffLocation;
     private NotificationFactory notice;
     private NotificationService serve;
-    public Trip(String dropOffLocation, String pickUpLocation, RideType rideType, String id, String status, double fare, double distance , String noticeMethod)
+    public Trip(  RideType rideType, String id, String status, double fare, double distance , String noticeMethod)
     {
-        this.dropOffLocation = dropOffLocation;
-        this.pickUpLocation = pickUpLocation;
+
         this.rideType = rideType;
         this.id = id;
         this.status = status;
@@ -51,9 +52,10 @@ public class Trip
         return pickUpLocation;
     }
 
-    public void setPickUpLocation() {
-
-     }
+    public void setPickUpLocation(String pickUpLocation)
+    {
+        this.pickUpLocation = pickUpLocation;
+    }
 
     public String getDropOffLocation(String location)
     {
