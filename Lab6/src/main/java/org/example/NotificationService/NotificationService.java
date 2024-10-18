@@ -11,9 +11,9 @@ public class NotificationService
         this.notificationSender=notificationSender;
     }
 
-    public void  sendMessage(String message)
+    public void  sendNotification(String recipient , String message)
     {
-        notificationSender.send(message);
+        notificationSender.sendNotification(recipient , message);
     }
 
 }
