@@ -18,13 +18,20 @@ public class Facebook implements  INotificationPlatform
 
 
     @Override
-    public void markNotificationAsRead()
+    public void markNotificationAsRead(String ID)
     {
 
     }
 
     @Override
-    public void markNotificationAsUnread() {
+    public void markNotificationAsUnread(String ID)
+    {
+
+    }
+
+
+    public void deleteNotification(String ID)
+    {
 
     }
 }
