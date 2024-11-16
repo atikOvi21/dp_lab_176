@@ -2,10 +2,10 @@ package org.example;
 
 import java.util.List;
 
-public class Twitter {
 
 
-    public class Facebook implements  INotificationPlatform
+
+    public class Twitter implements  INotificationPlatform
     {
         List<String> NotificationList;
 
@@ -39,4 +39,4 @@ public class Twitter {
         }
     }
 
-}
+

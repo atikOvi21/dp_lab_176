@@ -5,5 +5,6 @@ public interface INotificationPlatform
     void getNotifications();
     void markNotificationAsRead(String id);
     void markNotificationAsUnread(String id);
+    void deleteNotification(String id);
 
 }

@@ -25,4 +25,10 @@ public class FacebookAdapter implements INotificationPlatform{
     {
         facebook.markNotificationAsUnread(id);
     }
+
+    @Override
+    public void deleteNotification(String id)
+    {
+        facebook.deleteNotification(id);
+    }
 }
