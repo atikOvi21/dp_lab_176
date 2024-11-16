@@ -2,12 +2,12 @@ package org.example;
 
 import java.util.List;
 
-public class Facebook implements  INotificationPlatform
+public class Facebook
 {
     List<String> NotificationList;
 
 
-    @Override
+
     public void getNotifications()
     {
         for( var message : NotificationList )
@@ -17,13 +17,13 @@ public class Facebook implements  INotificationPlatform
     }
 
 
-    @Override
+
     public void markNotificationAsRead(String ID)
     {
 
     }
 
-    @Override
+
     public void markNotificationAsUnread(String ID)
     {
 
