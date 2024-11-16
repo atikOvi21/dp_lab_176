@@ -1,21 +1,21 @@
 package org.example;
 
-import java.util.List;
+import java.util.HashMap;
 
 public class NotificationAggregatorFacade
 {
-    List<INotificationPlatform>SocialMediaList;
+    HashMap<String, INotificationPlatform> SocialMediaList = new HashMap<>();
     public NotificationAggregatorFacade()
     {
-        SocialMediaList.add(new FacebookAdapter(new Facebook()));
-        SocialMediaList.add(new Twitter());
+        SocialMediaList.put("Facebook" ,new FacebookAdapter(new Facebook()));
+        SocialMediaList.put("Twitter" , new Twitter());
 
 
     }
 
-    public  void addSocialMedia(INotificationPlatform notificationPlatform)
+    public  void addSocialMedia(INotificationPlatform notificationPlatform, String PlatformName)
     {
-        SocialMediaList.add(notificationPlatform);
+        SocialMediaList.put(PlatformName,notificationPlatform);
     }
 
     public void markNotificationAsRead(String id , INotificationPlatform notificationPlatform)
